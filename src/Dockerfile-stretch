@@ -1,8 +1,8 @@
 FROM debian:stretch-slim
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-ENV BASH_ENV=/etc/profile
-    DEBIAN_FRONTEND=noninteractive
+ENV BASH_ENV=/etc/profile \
+    DEBIAN_FRONTEND=noninteractive \
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 WORKDIR /tmp/
 
