@@ -1,6 +1,6 @@
-# Debian Buster base image
+# Debian Base Image (WIP)
 
-This Repo contains the build instructions for the Debian Stretch base image. All images should inherit from this image.
+This Repo contains the build instructions for the Debian base image (Stretch and Buster). All images should inherit from this image.
 
 ## Documentation
 
@@ -19,9 +19,9 @@ note: `DOCKER_BUILD_ARG_` prefix can be prepend to all shown variables to replac
 
 | Argument                              | Default Value                                                 | Description |
 | :---                                  | :---                                                          | :---         |
-| FROM                                  | debian:buster-slim                                            | Base image to build from |
-| CONTAINER_RUNTIME_REQUIREMENTS        | less procps ca-certificates                                   | Packages for container during runtime |
-| CONTAINER_BUILD_REQUIREMENTS          | curl                                                          | Packages for container required during build |
+| FROM                                  | debian:stretch-slim || debian:buster-slim                     | Base image to build from |
+| CONTAINER_RUNTIME_REQUIREMENTS        | less procps netcat ca-certificates                            | Packages for container during runtime |
+| CONTAINER_BUILD_REQUIREMENTS          | *empty                                                        | Packages for container required during build |
 | CONTAINER_RUNTIME_REQUIREMENTS_EXTRA  | *empty                                                        | extra runtime requirements |
 | CONTAINER_BUILD_REQUIREMENTS_EXTRA    | *empty                                                        | extra build requirements |
 
