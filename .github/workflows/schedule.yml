@@ -1,0 +1,14 @@
+name: "Build Scheduler"
+on:
+  schedule:
+  - cron:  '2 1 * * 0'
+  
+jobs:
+  scheduler:
+    name: Build Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger
+      uses: wei/curl@master
+      with:
+        args: -X POST https://hub.docker.com/api/build/v1/source/ec1ffae6-f6a6-4657-b721-9e2141fba099/trigger/b0fea9f9-8978-4698-808c-1b0a05813e39/call/
