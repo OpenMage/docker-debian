@@ -31,4 +31,7 @@ RUN set -Eeu; \
     mkdir -p /usr/share/man/man1; \
     mkdir -p /usr/share/man/man7; \
     /usr/local/bin/docker-install-requirements; \
+    docker-package-download -o envsubst https://github.com/a8m/envsubst/releases/download/v1.1.0/envsubst-Linux-x86_64; \
+    mv envsubst /usr/local/bin/envsubst;\
+    chmod +x /usr/local/bin/envsubst;\
     /usr/local/bin/docker-layer-clean
