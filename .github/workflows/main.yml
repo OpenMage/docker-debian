@@ -1,9 +1,8 @@
-name: "Build Scheduler"
+name: "Build on main"
 on:
   workflow_dispatch:
-  schedule:
-  - cron:  '2 1 * * 0'
-
+  push:
+    branches: [ main ]
 jobs:
   scheduler:
     name: Build Trigger
