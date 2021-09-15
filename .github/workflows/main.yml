@@ -12,5 +12,5 @@ jobs:
         version: [ 'buster', 'stretch', 'bullseye' ]
     steps:
       - uses: actions/checkout@v1
-      - name: Build php base image
+      - name: Build debian base image
         run: docker build -t openmage/debian:${{ matrix.version }}-latest -f src/${{ matrix.version }}/src/Dockerfile src/${{ matrix.version }}/src/
