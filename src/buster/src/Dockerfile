@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 ENV BASH_ENV=/etc/profile \
     DEBIAN_FRONTEND=noninteractive \
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
