@@ -34,4 +34,6 @@ RUN set -Eeu; \
     docker-package-download -o envsubst https://github.com/a8m/envsubst/releases/download/v1.1.0/envsubst-Linux-x86_64; \
     mv envsubst /usr/local/bin/envsubst;\
     chmod +x /usr/local/bin/envsubst;\
+    sed -i '/^mozilla\/DST_Root_CA_X3/s/^/!/' /etc/ca-certificates.conf; \
+    update-ca-certificates -f; \
     /usr/local/bin/docker-layer-clean

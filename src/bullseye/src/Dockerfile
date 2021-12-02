@@ -21,4 +21,6 @@ RUN set -Eeu; \
     mkdir -p /usr/share/man/man1; \
     mkdir -p /usr/share/man/man7; \
     /usr/local/bin/docker-install-requirements; \
+    sed -i '/^mozilla\/DST_Root_CA_X3/s/^/!/' /etc/ca-certificates.conf; \
+    update-ca-certificates -f; \
     /usr/local/bin/docker-layer-clean
