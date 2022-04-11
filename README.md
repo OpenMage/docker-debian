@@ -1,6 +1,6 @@
 # Debian Base Image
 
-This Repo contains the build instructions for the Debian base image (Stretch and Buster). All images should inherit from this image.
+This Repo contains the build instructions for the Debian base image (Buster and Bullseye). All images should inherit from this image.
 
 ## Documentation
 
@@ -8,8 +8,8 @@ This image is automatically build with following cron expression `2 1 * * 0`.
 
 ### Environment vars
 
-| Argument                              | Default Value                                             | Description |
-| :---                                  | :---                                                      | :---         |
+| Argument | Default Value | Description |
+|:---------|:--------------|:------------|
 
 ## Contributing
 
