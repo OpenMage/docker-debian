@@ -6,7 +6,7 @@ ENV BASH_ENV=/etc/profile \
     PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 WORKDIR /tmp/
 
-ARG CONTAINER_RUNTIME_REQUIREMENTS="less procps netcat ca-certificates iputils-ping iproute2 unzip"
+ARG CONTAINER_RUNTIME_REQUIREMENTS="less procps netcat-traditional ca-certificates iputils-ping iproute2 unzip"
 ARG CONTAINER_RUNTIME_REQUIREMENTS_EXTRA=""
 ARG CONTAINER_BUILD_REQUIREMENTS=""
 ARG CONTAINER_BUILD_REQUIREMENTS_EXTRA=""
