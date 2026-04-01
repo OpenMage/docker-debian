@@ -1,22 +1,21 @@
-# Debian Base Image
+# ⚠️ DEPRECATED - This repository has been archived
 
-This Repo contains the build instructions for the [Debian](https://www.debian.org/releases/) base image (Buster, Bullseye and Bookworm). All images should inherit from this image.
+This project has been moved to [wilma-digital/docker-debian](https://github.com/wilma-digital/docker-debian).
 
-## Documentation
+**New Docker Hub namespace**: `wilmadigital/docker-debian`
 
-This image is automatically build with following cron expression `2 1 * * 0`.
+## Migration
 
-### Environment vars
+Old images will remain available but will no longer receive updates.
 
-| Argument | Default Value | Description |
-|:---------|:--------------|:------------|
+Please update your projects to use the new namespace:
 
-## Contributing
+```yaml
+# Old
+FROM openmage/php:8.5.3
 
-## Changelog
+# New
+FROM wilmadigital/php:8.5.3
+```
 
-All notable changes to this project will be documented in this section.
-
-### 2020-02-18
-
-- added workflow to trigger dockerhub autobuild
+For migration assistance, see: https://github.com/wilma-digital/docker-php/blob/main/MIGRATION.md
